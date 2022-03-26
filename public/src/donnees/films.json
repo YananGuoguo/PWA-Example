@@ -1,0 +1,74 @@
+[
+    {
+        "NumFilm": "1",
+        "Titre": "Avenger",
+        "Realisateur": "Marvel",
+        "Categorie": "Action",
+        "Duree": "240",
+        "Prix": "15.99",
+        "CheminPochette": "src/images/pochettes/Avenger.jpg"
+    },
+    {
+        "NumFilm": "2",
+        "Titre": "Mrs doubtfire",
+        "Realisateur": "qqun d'autre",
+        "Categorie": "Comedie",
+        "Duree": "90",
+        "Prix": "5.99",
+        "CheminPochette": "src/images/pochettes/Doubtfire.jpg"
+    },
+    {
+        "NumFilm": "3",
+        "Titre": "Inception",
+        "Realisateur": "M. Chose",
+        "Categorie": "Suspense",
+        "Duree": "90",
+        "Prix": "5.99",
+        "CheminPochette": "src/images/pochettes/Inception.jpg"
+    },
+    {
+        "NumFilm": "4",
+        "Titre": "Rambo",
+        "Realisateur": "Antonio Tavares",
+        "Categorie": "Action",
+        "Duree": "90",
+        "Prix": "5.99",
+        "CheminPochette": "src/images/pochettes/Rambo.jpg"
+    },
+    {
+        "NumFilm": "5",
+        "Titre": "The shawshank redemption ",
+        "Realisateur": "Bob",
+        "Categorie": "Drame",
+        "Duree": "90",
+        "Prix": "5.99",
+        "CheminPochette": "src/images/pochettes/Redemption.jpg"
+    },
+    {
+        "NumFilm": "6",
+        "Titre": "The Shining",
+        "Realisateur": "Autre",
+        "Categorie": "Horreur",
+        "Duree": "90",
+        "Prix": "5.99",
+        "CheminPochette": "src/images/pochettes/Shining.jpg"
+    },
+    {
+        "NumFilm": "7",
+        "Titre": "Titanic",
+        "Realisateur": "Camron",
+        "Categorie": "Drame",
+        "Duree": "90",
+        "Prix": "5.99",
+        "CheminPochette": "src/images/pochettes/titanic.jpg"
+    },
+    {
+        "NumFilm": "8",
+        "Titre": "Transformer",
+        "Realisateur": "Michael Bay",
+        "Categorie": "Action",
+        "Duree": "90",
+        "Prix": "5.99",
+        "CheminPochette": "src/images/pochettes/Transformer.jpg"
+    }
+]

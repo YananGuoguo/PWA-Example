@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Films</title>
+    <link rel="manifest" href="/manifest.webmanifest">
+    <!-- Page styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.min.css">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <style>
+    #install-app {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+    </style>
+    <!--<script src="src/donnees/films.js"></script> utilisation du tableau dans films.js-->
+    <script src="src/js/sw-enregistrer.js"></script>
+    <script src="src/js/librairie/idb.js"></script>
+    <script src="src/js/services/films-service.js"></script>
+    <script src="src/js/librairie/idb-operations.js"></script>
+    <script src="src/js/vueFilms.js"></script>
+    
+    <script src="src/js/app.js"></script>
+  </head>
+  <body onLoad="listeFilms()">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+      <div class="films-header mdl-layout__header mdl-layout__header--waterfall">
+        <div class="mdl-layout__header-row">
+          <span class="logo-font" style="color:red;font-size:24px;">
+            Gestion films
+          </span>
+          <!-- Add spacer, to align navigation to the right in desktop -->
+          <div class="films-header-spacer mdl-layout-spacer"></div>
+          
+          <!-- Navigation -->
+          <div class="films-navigation-container">
+            <nav class="films-navigation mdl-navigation">
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Ajouter</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Rechercher</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Lister</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Modifier</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Enlever</a>
+            </nav>
+          </div>
+          <span class="films-mobile-title mdl-layout-title">
+            
+          </span>
+          <button class="films-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+            <i class="material-icons">more_vert</i>
+          </button>
+         
+        </div>
+      </div>
+
+      <div class="films-drawer mdl-layout__drawer">
+        <span class="logo-font" style="color:red;font-size:24px;border:1px solid gray;text-align:center;">
+            Gestion films
+          </span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="">Ajouter</a>
+          <a class="mdl-navigation__link" href="">Rechercher</a>
+          <a class="mdl-navigation__link" href="">Lister</a>
+          <a class="mdl-navigation__link" href="">Modifier</a>
+          <a class="mdl-navigation__link" href="">Enlever</a>
+          
+        </nav>
+      </div>
+      <!--<div class="mdl-grid portfolio-max-width portfolio-contact">
+        <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+            <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">Contact</h2>
+            </div>
+            <div class="mdl-card__media">
+                <img class="article-image" src=" images/contact-image.jpg" border="0" alt="">
+            </div>
+            <div class="mdl-card__supporting-text">
+                <p>
+                    Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
+                </p>
+                <p>
+                    Excepteur reprehenderit sint exercitation ipsum consequat qui sit id velit elit. Velit anim eiusmod labore sit amet.
+                </p>
+                <form action="#" class="">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name">
+                        <label class="mdl-textfield__label" for="Name">Name...</label>
+                        <span class="mdl-textfield__error">Letters and spaces only</span>
+                    </div></br>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="Email">
+                        <label class="mdl-textfield__label" for="Email">Email...</label>
+                    </div></br>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="mdl-textfield__input" type="text" id="Cell">
+                      <label class="mdl-textfield__label" for="Cell">Cell...</label>
+                    </div>
+                    <p>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
+                            Submit
+                        </button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>-->
+      <div class="films-content mdl-layout__content">
+        
+        
+        
+        
+        <div class="films-more-section">
+          <div class="films-section-title mdl-typography--display-1-color-contrast">Liste des films</div>
+          <div  id="listeFilms"  class="films-card-container mdl-grid">
+
+          </div>
+        </div>
+
+        <footer class="films-footer mdl-mega-footer">
+          
+
+        </footer>
+      </div>
+    </div>
+    <button onClick="montrerInstallBanner();" id="install-app" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Install app</button>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  </body>
+</html>

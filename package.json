@@ -1,0 +1,23 @@
+{
+  "name": "pwa-films",
+  "version": "1.0.0",
+  "description": "gestion des films",
+  "main": "index.js",
+  "dependencies": {
+    "http-server": "^0.12.3",
+    "idb": "^7.0.1"
+  },
+  "scripts": {
+    "start": "http-server -c-1"
+  },
+  "keywords": [
+    "pwa",
+    "films",
+    "streaming",
+    "gestion films",
+    "location",
+    "visionner"
+  ],
+  "author": "",
+  "license": "ISC"
+}
